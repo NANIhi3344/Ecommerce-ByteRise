@@ -1,6 +1,5 @@
-  import React, { useState } from 'react'
+import React, { useState } from 'react'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
-
 export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -46,9 +45,25 @@ export const Login = () => {
                  
                 </div>
             </div>
+              <div className="setting-container">
+                <div className='remember'>
+                    <input type="checkbox"/>
+                    <label>Remember me!</label>
+                </div>
+                <div>
+                <div className='forgot-password'>
+                <a href="">Forgot Password</a>
+                </div>
+                </div>
+              </div>
             <button className="w-full bg-purple-500 text-white p-3 rounded hover:bg-purple-600">Login</button>
+
+            <div className='newUser'>
+              <p>Not a user? <a href="">Create an account</a></p>
+            </div>
             </div>
         </div>
     </div>
   )
 }
+
