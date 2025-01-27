@@ -1,5 +1,6 @@
 const express=require('express');
 const connectDB = require('./src/Database/db');
+const userrouter = require('./src/Controllers/user');
 const app=express();
 
 require('dotenv').config({
@@ -12,8 +13,7 @@ const url=process.env.db_url;
 app.get('/',(req,res)=>{
     res.send('Hello World');
 })
-
-
+app.use('/register', userrouter);
 app.listen(PORT,async()=>{
 
     try {
