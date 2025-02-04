@@ -1,68 +1,31 @@
-const mongoose = require('mongoose');
-const { model, Schema } = mongoose;
+const multer = require('multer');
 
-const userSchema = new Schema({
-  name: {
-    type: String,
-    required: [true, "Please enter your name!"],
-  },
-  email: {
-    type: String,
-    required: [true, "Please enter your email!"],
-  },
-  password: {
-    type: String,
-    required: [true, "Please enter your password"],
-    minLength: [4, "Password should be greater than 4 characters"],
-    select: false,
-  },
-  // phoneNumber: {
-  //   type: Number,
-  // },
-  // addresses: [
-  //   {
-  //     country: {
-  //       type: String,
-  //     },
-  //     city: {
-  //       type: String,
-  //     },
-  //     address1: {
-  //       type: String,
-  //     },
-  //     address2: {
-  //       type: String,
-  //     },
-  //     zipCode: {
-  //       type: Number,
-  //     },
-  //     addressType: {
-  //       type: String,
-  //     },
-  //   }
-  // ],
-  // role: {
-  //   type: String,
-  //   default: "user",
-  // },
-  // avatar: {
-  //   public_id: {
-  //     type: String,
-  //     required: true,
-  //   },
-  //   url: {
-  //     type: String,
-  //     required: true,
-  //   },
-  // },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  resetPasswordToken: String,
-  resetPasswordTime: Date,
-});
 
-const userModel = model('User', userSchema);
+// Configure multer storage
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, 'uploads/'); // Define your upload folder
+    },
+    filename: function(req, file, cb) {
+      const uniqueSuffix =  Date.now() + '-' + Math.round.apply(Math.random() * 1e9);
+       // Define a unique filename
+       const filename = file.originalname.split(".")[0];
+       cb(null,filename + "-" + uniqueSuffix + ".png"); // Define
+    },
+  });
+  
+  const productstorage = multer.diskStorage({
 
-module.exports = userModel;
+    destination: (req, file, cb) => {
+      cb(null, 'productuploads/');
+    },
+    filename: function(req, file, cb) {
+      const uniqueSuffix =  Date.now() + '-' + Math.round.apply(Math.random() * 1e9);
+      const filename = file.originalname.split(".")[0];
+      cb(null,filename + "-" + uniqueSuffix + ".png");
+    }
+  });
+
+  // Initialize upload object
+module.exports.upload = multer({ storage: storage });
+module.exports.productupload = multer({ storage: productstorage });
