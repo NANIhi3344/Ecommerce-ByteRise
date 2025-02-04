@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import axios from 'axios';
+import { Button, Input } from '@chakra-ui/react';
 
 export const Productform = () => {
     const [name, setName] = useState('');
@@ -59,7 +60,7 @@ export const Productform = () => {
             <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
                 <div className='mt-4'>
                     <label className='pb-1 block'>Email <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='email'
                         value={email}
                         className='w-full p-2 border rounded'
@@ -71,7 +72,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Name <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='text'
                         value={name}
                         className='w-full p-2 border rounded'
@@ -83,7 +84,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Price <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='text'
                         value={price}
                         className='w-full p-2 border rounded'
@@ -95,7 +96,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Description <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='text'
                         value={description}
                         className='w-full p-2 border rounded'
@@ -107,7 +108,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Category <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='text'
                         value={category}
                         className='w-full p-2 border rounded'
@@ -119,7 +120,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Stock <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='text'
                         value={stock}
                         className='w-full p-2 border rounded'
@@ -131,7 +132,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Tag <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='text'
                         value={tag}
                         className='w-full p-2 border rounded'
@@ -143,7 +144,7 @@ export const Productform = () => {
 
                 <div className='mt-4'>
                     <label className='pb-1 block'>Upload Images <span className='text-red-500'>*</span></label>
-                    <input
+                    <Input
                         type='file'
                         name='image'
                         id='upload'
@@ -165,9 +166,9 @@ export const Productform = () => {
                     </div>
                 </div>
 
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 w-full">
+                <Button colorScheme='blue'>
                     Submit
-                </button>
+                    </Button>
             </form>
         </div>
     );
