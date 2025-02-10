@@ -1,5 +1,8 @@
 const express=require('express');
 const connectDB = require('./src/Database/db');
+const userRouter = require('./src/Controllers/user');
+const productrouter = require('./src/Controllers/Product');
+
 const app=express();
 
 require('dotenv').config({
@@ -14,7 +17,9 @@ app.get('/',(req,res)=>{
 })
 
 
+app.use('/auth', userRouter);
 app.listen(PORT,async()=>{
+app.use("/product",productrouter);
 
     try {
         await connectDB(url);
@@ -22,5 +27,5 @@ app.listen(PORT,async()=>{
     }
     catch(err){
         console.log(err);
-    }
+    }
 });
