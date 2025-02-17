@@ -1,10 +1,12 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Login from './Components/Login'
-import { Signup } from './Components/Signup'
+
+import { Signup } from './Component/signup'
 import { Home } from './page/Home'
-import { ProductForm } from './Components/Productform'
-import { Productcardseller } from './Components/productcardforseller'
+import { ProductForm } from './Component/Productform'
+import { Productcardseller } from './Component/productcardforseller'
+import Singlecard from './Component/Singlecard'
+import { Login } from './Component/Login'
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
       <Route path="/Signup" element={<Signup/>}/>
    <Route path='/productform' element={<ProductForm/>}/>
    <Route path='/my-product' element={<Productcardseller/>}/>
+   <Route path='/product/:id' element={<Singlecard/>}/>
     </Routes>
     </>
     

@@ -1,31 +1,31 @@
-import React from 'react'
-import { Productcard } from '../Components/Productcard'
-import { use } from 'react'
 import React, { useState, useEffect } from 'react';
+import { Productcard } from '../Component/Productcard';
 
 
-const productdetails=[
-    // {
-    //   image:"https://pixlr.com/images/generator/text-to-image.webp",
-    //   name:"Product1",
-    //   price:"$100",
-    //   description:"new product"
-    // },
-    // {
-    //   image:"https://pixlr.com/images/generator/text-to-image.webp",
-    //   name:"Product2",
-    //   price:"$100",
-    //   description:"new product"
-    // },
-    // {
-    //   image:"https://pixlr.com/images/generator/text-to-image.webp",
-    //   name:"Product3",
-    //   price:"$100",
-    //   description:"new product"
-    // },
-    
-  ]
+// const productdetails=[
+//   {
+//     image:"https://pixlr.com/images/generator/text-to-image.webp",
+//     name:"Product1",
+//     price:"$100",
+//     description:"new product"
+//   },
+//   {
+//     image:"https://pixlr.com/images/generator/text-to-image.webp",
+//     name:"Product2",
+//     price:"$100",
+//     description:"new product"
+//   },
+//   {
+//     image:"https://pixlr.com/images/generator/text-to-image.webp",
+//     name:"Product3",
+//     price:"$100",
+//     description:"new product"
+//   },
+// ]
 export const Home = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3000/product/get-products")
@@ -45,16 +45,21 @@ export const Home = () => {
         setLoading(false);
       });
   }, []);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className='w-full min-h-screen bg-neutral-800'>
-    <div className="grid grid-cols-5 gap-4 p-4">{
-        products.map((product,index)=>{
-            return(
-                <>
-                <Productcard key={index} {...product}/></>
-            )
-    })}</div></div>
-  )
-}
-
+      <div className="grid grid-cols-5 gap-4 p-4">
+        {products.map((product, index) => (
+          <Productcard key={index} {...product} />
+        ))}
+      </div>
+    </div>
+  );
+};
