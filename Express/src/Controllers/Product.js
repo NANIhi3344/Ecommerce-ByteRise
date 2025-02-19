@@ -141,7 +141,7 @@ productrouter.put("/edit-product/:id", productupload.array('files', 10), async (
         let updateimages = existproduct.image;
         if (req.files && req.files.length > 0) {
             updateimages = req.files.map((img) => {
-                return /product/${path.basename(img.path)};
+                return `/product/${path.basename(img.path)}`;
             });
         }
         existproduct.name = name;
