@@ -1,9 +1,12 @@
 const express=require('express');
+const cors=require('cors');
 const connectDB = require('./src/Database/db');
 const userRouter = require('./src/Controllers/user');
 const productrouter = require('./src/Controllers/Product');
 
 const app=express();
+app.use(cors());
+app.use(express.json());
 
 require('dotenv').config({
     path:'./src/config/.env'
@@ -29,3 +32,4 @@ app.use("/product",productrouter);
         console.log(err);
     }
 });
+

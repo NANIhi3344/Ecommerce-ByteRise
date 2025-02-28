@@ -43,7 +43,7 @@ export const Signup = () => {
               }
             }
 
-        axios.post('http://localhost:5000/create-user',formData,config).then((res) => {
+        axios.post('http://localhost:5000/auth/create-user',formData,config).then((res) => {
             console.log(res.data)
         }).catch((err) => {       
             console.log(err)
@@ -188,3 +188,6 @@ export const Signup = () => {
     </div>
   );
 }
+
+
+

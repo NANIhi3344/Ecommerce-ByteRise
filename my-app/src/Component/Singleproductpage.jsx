@@ -15,7 +15,7 @@ const Singleproductpage = () => {
 
     const addcart = async(email,productid,productname,quantity)=>{
         try{
-            await axios.post(http//localhost:3000/cart,
+            await axios.post(`http//localhost:3000/product/cart`,
             {
                 email:email,
                 productid:productid,
@@ -37,7 +37,7 @@ const Singleproductpage = () => {
         const fetchProduct = async () => {
             try {
                 const response = await axios.get(
-                    http://localhost:3000/product/${id}
+                    `http://localhost:3000/product/${id}`
                 );
                 console.log("Fetched product:", response.data.product);
                 setproduct(response.data.product); // Ensure correct state setting
