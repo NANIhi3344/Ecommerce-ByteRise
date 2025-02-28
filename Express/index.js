@@ -33,3 +33,18 @@ app.use("/product",productrouter);
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
