@@ -1,6 +1,12 @@
 const express=require('express');
+const cors=require('cors');
 const connectDB = require('./src/Database/db');
+const userRouter = require('./src/Controllers/user');
+const productrouter = require('./src/Controllers/Product');
+
 const app=express();
+app.use(cors());
+app.use(express.json());
 
 require('dotenv').config({
     path:'./src/config/.env'
@@ -14,7 +20,9 @@ app.get('/',(req,res)=>{
 })
 
 
+app.use('/auth', userRouter);
 app.listen(PORT,async()=>{
+app.use("/product",productrouter);
 
     try {
         await connectDB(url);
@@ -22,5 +30,21 @@ app.listen(PORT,async()=>{
     }
     catch(err){
         console.log(err);
-    }
+    }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
