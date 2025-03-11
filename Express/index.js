@@ -3,6 +3,8 @@ const cors=require('cors');
 const connectDB = require('./src/Database/db');
 const userRouter = require('./src/Controllers/user');
 const productrouter = require('./src/Controllers/Product');
+const orders = require('./src/Model/OrderSchema');
+const orederrouter = require('./src/Controllers/Order');
 
 const app=express();
 app.use(cors());
@@ -21,6 +23,7 @@ app.get('/',(req,res)=>{
 
 
 app.use('/auth', userRouter);
+app.use('/order', orederrouter);
 app.listen(PORT,async()=>{
 app.use("/product",productrouter);
 

@@ -84,3 +84,18 @@ This project aims to develop a scalable and interactive online learning platform
 
 ---
 
+## Milestone 25: Order Creation
+
+- Developed an endpoint to receive products, user details, and address details.
+- Retrieved the user's _id from the database using their email.
+- Created separate orders for each product, all linked to the same address.
+- Stored order details in the MongoDB orders collection using the defined Order Schema.
+
+---
+
+## Milestone 26: Fetch User Orders
+
+- Built an endpoint that accepts the user's email as input.
+- Used the email to retrieve the corresponding user _id.
+- Queried the database to fetch all orders associated with that user.
+- Returned the user's order history in the response.
