@@ -83,4 +83,12 @@ This project aims to develop a scalable and interactive online learning platform
 - Initial deployment for testing backend and frontend functionality.  
 
 ---
+## *Milestone 20 - User Profile Endpoint *
+
+- Implemented the /profile endpoint to fetch user data and store it in an object. 
+- Created profile.jsx to dynamically display all user details.  
+- Ensured proper data handling and integration between frontend and backend.
+- Planned future improvements like profile editing, authentication, and UI enhancements.  
+
+---
 
