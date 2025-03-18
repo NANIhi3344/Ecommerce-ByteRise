@@ -108,3 +108,10 @@ This project aims to develop a scalable and interactive online learning platform
 - Used the email to retrieve the corresponding user _id.
 - Queried the database to fetch all orders associated with that user.
 - Returned the user's order history in the response.
+
+# Milestone 27: My Orders Page
+We created a "My Orders" page for the frontend of the Ecommerce-Follow-Along project. This page displays all the orders placed by the user.
+
+# Milestone 28 - Cancel Order Feature
+Added a "Cancel Order" button in the My Orders page and created a backend endpoint to update order status to "Cancelled".  
+Users can cancel their orders unless they are already marked as "Cancelled".

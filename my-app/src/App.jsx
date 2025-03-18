@@ -10,7 +10,6 @@ import { Login } from './Component/Login'
 import CreateAddress from './Component/Address'
 import SelectAddress from './page/Selectaddress'
 import OrderConfirmation from './page/Orderconformation'
-import MyOrdersPage from './page/Orderhistory'
 
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
    <Route path='/Address' element={<CreateAddress/>}/>
    <Route path='/selectaddress' element={<SelectAddress/>} />
    <Route path='order' element={<OrderConfirmation/>}/>
-   <Route path='/orderhistory' element={<MyOrdersPage/>}/>
     </Routes>
     </>
     
