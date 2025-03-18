@@ -7,6 +7,9 @@ import { ProductForm } from './Component/Productform'
 import { Productcardseller } from './Component/productcardforseller'
 import Singlecard from './Component/Singlecard'
 import { Login } from './Component/Login'
+import CreateAddress from './Component/Address'
+import SelectAddress from './page/Selectaddress'
+import OrderConfirmation from './page/Orderconformation'
 
 
 function App() {
@@ -20,10 +23,14 @@ function App() {
    <Route path='/productform' element={<ProductForm/>}/>
    <Route path='/my-product' element={<Productcardseller/>}/>
    <Route path='/product/:id' element={<Singlecard/>}/>
+   <Route path='/Address' element={<CreateAddress/>}/>
+   <Route path='/selectaddress' element={<SelectAddress/>} />
+   <Route path='order' element={<OrderConfirmation/>}/>
     </Routes>
     </>
     
   )
 }
 
-export default App
+export default App;
+
