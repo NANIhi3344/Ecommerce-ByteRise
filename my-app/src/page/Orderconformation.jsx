@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from '../components/auth/nav';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-const OrderConfirmation = () => {
+const Orderconfirmation = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const { addressId, email } = location.state || {};
@@ -29,7 +30,7 @@ const OrderConfirmation = () => {
                 const address = addressData.addresses.find(addr => addr._id === addressId);
                 if (!address) {
                     throw new Error('Selected address not found.');
-                }
+                }  
                 setSelectedAddress(address);
                 // Fetch cart products from /cartproducts endpoint
                 const cartResponse = await axios.get('http://localhost:3000//product/getcart', {
@@ -160,6 +161,16 @@ const OrderConfirmation = () => {
                         <div className='p-4 border rounded-md'>
                             <p>Cash on Delivery</p>
                         </div>
+                        <PayPalScriptProvider options={{ clientId: "AboNSeELm0SYyh_XNtfA9supbmIJF0BIdxbw661PXykm43sDm9-1l8RnDhHkm8HKEKhiBBkdkKotAZKO" }}>
+                            <PayPalButtons style={{ layout: "horizontal" }}
+                            createOrder={(data,actions)=>{
+                                return actions.order.create({purchase_units:[{amount:{value:totalPrice.toFixed(2)}}]})
+                            }}
+                            onApprove={(data,actions)=>{
+                                return actions.order.capture()
+                            }}
+                            >Pay with PayPal</PayPalButtons>
+                            </PayPalScriptProvider>
                     </div>
                     {/* Place Order Button */}
                     <div className='flex justify-center'>
@@ -176,4 +187,4 @@ const OrderConfirmation = () => {
     );
 };
 
-export default OrderConfirmation;
+export default Orderconfirmation;
