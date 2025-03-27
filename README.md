@@ -129,3 +129,5 @@ Implemented PayPal API for online payments. Installed react-paypal-js and integr
 # Milestione 31 - Redux
 Installed the react-redux and @reduxjs/toolkit packages. Created a store folder with store.js and userActions.js files. Configured the Redux store with a userReducer to handle global email state. Defined the setEmail action to store the user's email in the global state. Wrapped the App component inside the Provider component with the store as props in index.js.
 
+# Milestone 32 - Accessing Global State with Redux
+In this milestone, we integrated Redux to store and access the user's email across all pages. We used the dispatch method in the Login page to save the email in the global state. The useSelector hook was used to retrieve the stored email in other pages, enabling seamless access to user data. This milestone reinforced Redux state management concepts and improved global state handling in our project.
