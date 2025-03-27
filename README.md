@@ -84,3 +84,50 @@ This project aims to develop a scalable and interactive online learning platform
 
 ---
 
+## *Milestone 20 - User Profile Endpoint *
+
+- Implemented the /profile endpoint to fetch user data and store it in an object. 
+- Created profile.jsx to dynamically display all user details.  
+- Ensured proper data handling and integration between frontend and backend.
+- Planned future improvements like profile editing, authentication, and UI enhancements.  
+
+---
+
+## Milestone 25: Order Creation
+
+- Developed an endpoint to receive products, user details, and address details.
+- Retrieved the user's _id from the database using their email.
+- Created separate orders for each product, all linked to the same address.
+- Stored order details in the MongoDB orders collection using the defined Order Schema.
+
+---
+
+## Milestone 26: Fetch User Orders
+
+- Built an endpoint that accepts the user's email as input.
+- Used the email to retrieve the corresponding user _id.
+- Queried the database to fetch all orders associated with that user.
+- Returned the user's order history in the response.
+
+# Milestone 27: My Orders Page
+We created a "My Orders" page for the frontend of the Ecommerce-Follow-Along project. This page displays all the orders placed by the user.
+
+# Milestone 28 - Cancel Order Feature
+Added a "Cancel Order" button in the My Orders page and created a backend endpoint to update order status to "Cancelled".  
+Users can cancel their orders unless they are already marked as "Cancelled".
+
+# Milestone 29 - PayPal Integration
+
+In this milestone, we added an online payment option using the PayPal API. Users can now choose between COD and PayPal for payment. PayPal buttons will be displayed when the online payment option is selected. The next milestone will focus on implementing the payment functionality.
+
+# Milestone 30: PayPal backend
+Implemented PayPal API for online payments. Installed react-paypal-js and integrated PayPalScriptProvider. Configured PayPal sandbox client ID for testing transactions. Added PayPal payment buttons in the order confirmation page. Pushed the updated code to GitHub.
+
+# Milestone 30 - Payment Functionality
+Implemented PayPal API for online payments. Installed react-paypal-js and integrated PayPalScriptProvider. Configured PayPal sandbox client ID for testing transactions. Added PayPal payment buttons in the order confirmation page. Pushed the updated code to GitHub.
+
+# Milestione 31 - Redux
+Installed the react-redux and @reduxjs/toolkit packages. Created a store folder with store.js and userActions.js files. Configured the Redux store with a userReducer to handle global email state. Defined the setEmail action to store the user's email in the global state. Wrapped the App component inside the Provider component with the store as props in index.js.
+
+# Milestone 32 - Accessing Global State with Redux
+In this milestone, we integrated Redux to store and access the user's email across all pages. We used the dispatch method in the Login page to save the email in the global state. The useSelector hook was used to retrieve the stored email in other pages, enabling seamless access to user data. This milestone reinforced Redux state management concepts and improved global state handling in our project.
