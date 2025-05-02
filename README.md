@@ -103,4 +103,12 @@ The *index.js* file sets up the Express app, basic routing, and server listener.
 - User Authentication: The endpoint accepts user credentials, retrieves user data, and verifies the password using bcrypt.
 - Password Validation: Hashed passwords are compared for secure authentication.
 
+## Milestone 8: Product Display Components
+
+Two React components were created:
+- Home.jsx: Displays the product list.
+- ProductCard.jsx: Acts as a template for individual product information.
+
+Products are dynamically mapped and displayed based on database content.
+
 
