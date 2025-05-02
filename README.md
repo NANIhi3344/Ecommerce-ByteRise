@@ -121,4 +121,16 @@ Products are dynamically mapped and displayed based on database content.
 - Data Fetching: Updated Products.js to retrieve product data from MongoDB and pass it to Home.jsx.
 - Form Submission: Enhanced the product form to send data to the database.
 
+## Milestone 13: Product Update Feature
+
+- Edit Functionality: Created an endpoint to update product data with a PUT request.
+- Frontend Enhancements: Added edit and delete buttons, with role-based visibility for sellers.
+
+---
+
+## Milestone 14: Product Deletion and Bug Fixes
+
+- Delete Feature: Implemented an endpoint to delete products by ID.
+- Bug Fixes: Resolved unexpected behavior and optimized routing.
+
 
