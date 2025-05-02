@@ -84,3 +84,11 @@ This project aims to develop a scalable and interactive online learning platform
 
 ---
 
+## Milestone 15: Navigation Bar Implementation
+
+Navbar Creation: Developed a persistent navigation bar that appears on all pages, enhancing user navigation.
+NavLinks Added: Included links to Home, Product Form, Login, and Sign Up pages for easy access.
+Styling: Utilized Tailwind CSS to ensure a responsive and visually appealing design.
+
+
+
