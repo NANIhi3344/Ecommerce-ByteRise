@@ -84,3 +84,10 @@ This project aims to develop a scalable and interactive online learning platform
 
 ---
 
+## Milestone 23: Order Placement Workflow
+
+Place Order Button: Added functionality in the cart page to initiate the order placement process.
+Select Address Page: Developed a page displaying all user addresses with an option to select a delivery address.
+Address Retrieval: Created a backend endpoint to fetch all addresses associated with a user.
+
+---
