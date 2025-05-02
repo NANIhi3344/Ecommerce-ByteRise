@@ -133,4 +133,11 @@ Products are dynamically mapped and displayed based on database content.
 - Delete Feature: Implemented an endpoint to delete products by ID.
 - Bug Fixes: Resolved unexpected behavior and optimized routing.
 
+- ## Milestone 17 & 18: Cart Functionality Development
+
+Cart Schema: Extended the existing schema to include cart details for each user.
+Post Request: Created an endpoint to handle adding products to the user's cart and storing them in the database.
+Multer Integration: Ensured image uploads function correctly within the cart system.
+
+
 
