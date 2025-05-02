@@ -83,4 +83,10 @@ This project aims to develop a scalable and interactive online learning platform
 - Initial deployment for testing backend and frontend functionality.  
 
 ---
+## Milestone 21: Address Form Creation
 
+Address.jsx: Developed a form for users to input address details, including country, state, and pincode.
+State Management: Utilized useState hook to manage form inputs.
+Form Submission: Implemented Axios to send address data to the backend and navigate to the profile page upon submission.
+
+---
