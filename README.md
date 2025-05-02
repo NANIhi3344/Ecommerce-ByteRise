@@ -141,3 +141,16 @@ Multer Integration: Ensured image uploads function correctly within the cart sys
 
 
 
+## Milestone 23: Order Placement Workflow
+
+Place Order Button: Added functionality in the cart page to initiate the order placement process.
+Select Address Page: Developed a page displaying all user addresses with an option to select a delivery address.
+Address Retrieval: Created a backend endpoint to fetch all addresses associated with a user.
+
+---
+## Milestone 24: Order Summary and Confirmation
+
+Order Summary: Displayed all products included in the order along with selected delivery address and total cart value.
+Place Order Button: Implemented a final confirmation button to place the order, completing the purchase process.
+
+---
