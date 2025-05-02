@@ -111,4 +111,10 @@ Two React components were created:
 
 Products are dynamically mapped and displayed based on database content.
 
+## Milestone 9: Product Form Creation
+
+- Frontend Form: A user-friendly form to input product details like name, price, description, category, and images.
+- Form File: Created ProductForm.jsx for data collection and validation.
+
+
 
