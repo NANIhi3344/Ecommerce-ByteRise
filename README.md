@@ -83,4 +83,18 @@ This project aims to develop a scalable and interactive online learning platform
 - Initial deployment for testing backend and frontend functionality.  
 
 ---
+## Milestone 3: Backend Setup and Project Structure
+
+We established the foundational structure for the backend as follows:
+
+- *src/ Directory:* Contains server-side source files.
+  - *config/*: Holds environment configuration like MongoDB URL and port.
+  - *controllers/*: Handles request logic for different routes.
+  - *database/*: Connects to MongoDB via db.js.
+  - *middleware/*: Contains custom middleware like centralized error handling.
+  - *models/*: Defines Mongoose schemas.
+  - *routes/*: Sets up API endpoints.
+  - *utils/*: Includes helper functions like ErrorHandler.js.
+
+The *index.js* file sets up the Express app, basic routing, and server listener.
 
