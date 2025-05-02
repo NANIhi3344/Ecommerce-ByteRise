@@ -1,28 +1,41 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-
-import { Signup } from './Component/signup'
-import { Home } from './page/Home'
-import { ProductForm } from './Component/Productform'
-import { Productcardseller } from './Component/productcardforseller'
-import Singlecard from './Component/Singlecard'
 import { Login } from './Component/Login'
+import { Signup } from './Component/Signup'
+import { Home } from './page/Home'
+import Navbar from './Component/Navbar'
+import Singlecard from './Component/Singlecard'
+import Productform from './Component/Productform'
+import Cart from './page/cart'
+import SelectAddress from './page/selectaddress'
+import OrderConfirmation from './page/Oderconfirmation'
+import PrivateRouter from './Router/PrivateRouter'
 
 
 function App() {
- 
- return (
+  
+
+  return (
     <>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/Login" element={<Login/>}/>
-      <Route path="/Signup" element={<Signup/>}/>
-   <Route path='/productform' element={<ProductForm/>}/>
-   <Route path='/my-product' element={<Productcardseller/>}/>
-   <Route path='/product/:id' element={<Singlecard/>}/>
-    </Routes>
+    <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path='/cart'  element={<Cart/>}/>
+        <Route path="/productform" element={
+          <PrivateRouter>
+          <Productform />
+          </PrivateRouter>} />
+       <Route path='/product/:id' element={<Singlecard/>}/>
+       <Route path='/selectaddress' element={<SelectAddress/>}/>  
+       <Route path='/orderconfirmation' element={<OrderConfirmation/>}/>
+       <Route path='*' element={<h1>Not Found</h1>}/> 
+      </Routes>
     </>
-    
   )
 }
 
