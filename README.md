@@ -116,5 +116,9 @@ Products are dynamically mapped and displayed based on database content.
 - Frontend Form: A user-friendly form to input product details like name, price, description, category, and images.
 - Form File: Created ProductForm.jsx for data collection and validation.
 
+## Milestone 11 & 12: Frontend-Backend Integration
+
+- Data Fetching: Updated Products.js to retrieve product data from MongoDB and pass it to Home.jsx.
+- Form Submission: Enhanced the product form to send data to the database.
 
 
