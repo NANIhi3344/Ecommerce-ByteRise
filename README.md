@@ -98,3 +98,9 @@ We established the foundational structure for the backend as follows:
 
 The *index.js* file sets up the Express app, basic routing, and server listener.
 
+## Milestone 7: Login Endpoint Development
+
+- User Authentication: The endpoint accepts user credentials, retrieves user data, and verifies the password using bcrypt.
+- Password Validation: Hashed passwords are compared for secure authentication.
+
+
