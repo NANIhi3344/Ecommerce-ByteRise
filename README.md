@@ -91,3 +91,9 @@ Select Address Page: Developed a page displaying all user addresses with an opti
 Address Retrieval: Created a backend endpoint to fetch all addresses associated with a user.
 
 ---
+## Milestone 24: Order Summary and Confirmation
+
+Order Summary: Displayed all products included in the order along with selected delivery address and total cart value.
+Place Order Button: Implemented a final confirmation button to place the order, completing the purchase process.
+
+---
