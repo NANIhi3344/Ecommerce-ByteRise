@@ -1,12 +1,15 @@
 const express=require('express');
-const cors=require('cors');
 const connectDB = require('./src/Database/db');
-const userRouter = require('./src/Controllers/user');
-const productrouter = require('./src/Controllers/Product');
-
+const userrouter = require('./src/Controller/user');
+const { get } = require('mongoose');
+const productrouter = require('./src/Controller/Product');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const app=express();
-app.use(cors());
+
 app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
 
 require('dotenv').config({
     path:'./src/config/.env'
@@ -19,10 +22,9 @@ app.get('/',(req,res)=>{
     res.send('Hello World');
 })
 
-
-app.use('/auth', userRouter);
+app.use('/order', orderrouter);
+app.use('/auth', userrouter);
 app.listen(PORT,async()=>{
-app.use("/product",productrouter);
 
     try {
         await connectDB(url);
@@ -30,21 +32,13 @@ app.use("/product",productrouter);
     }
     catch(err){
         console.log(err);
-    }
+    }
 });
+app.use('/auth', userrouter)
+app.use('/product', productrouter);
 
+res.cookie('autherization', token)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+app.get('/', (req,res)=>{
+    res.send('Product router');
+});
