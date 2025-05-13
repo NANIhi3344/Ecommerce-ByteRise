@@ -141,3 +141,11 @@ Multer Integration: Ensured image uploads function correctly within the cart sys
 
 
 
+## Milestone 15: Navigation Bar Implementation
+
+Navbar Creation: Developed a persistent navigation bar that appears on all pages, enhancing user navigation.
+NavLinks Added: Included links to Home, Product Form, Login, and Sign Up pages for easy access.
+Styling: Utilized Tailwind CSS to ensure a responsive and visually appealing design.
+
+
+
